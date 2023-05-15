@@ -1,0 +1,57 @@
+#best__seller {
+   .best__seller__title {
+      font-weight: bolder;
+      font-size: 3rem;
+      text-align: center;
+   }
+
+   .best__seller__subtitle {
+      text-align: center;
+   }
+
+   .products__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .card__body {
+         width: calc(25% - 2rem);
+         text-decoration: none;
+         color: black;
+         margin: 2rem 0;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+
+         &__img-wrapper {
+            padding: 1.5rem;
+            height: 80%;
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__img {
+               max-height: 100%;
+               max-width: 100%;
+               border-radius: 15px;
+            }
+         }
+
+         &__tx-wrapper {
+            &__name {
+               margin: .5rem 0;
+            }
+
+            &__price {
+               font-size: 1.5rem;
+               font-weight: bolder;
+            }
+         }
+      }
+   }
+}
