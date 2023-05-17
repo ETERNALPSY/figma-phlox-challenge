@@ -3,12 +3,16 @@ import CategoryCards from './components/categoryCards/categoryCards'
 import BestProducts from './components/bestProducts/bestProducts'
 import './App.css'
 import DetailProduct from './pages/detailProduct/detailProduct'
+import Navbar from './components/nav/nav'
+import Main from './components/main/main'
 
 
 function App() {
 
    return (
       <>
+         <Navbar/>
+         <Main/>
          <CategoryCards />
          <Routes>
             <Route path='/' element={<BestProducts />} > 
