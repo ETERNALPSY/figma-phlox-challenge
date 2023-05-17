@@ -8,17 +8,35 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   .close__button {
+      position: absolute;
+      top: 2.5rem;
+      right: 2rem;
+
+      .x { 
+      background-color: white;
+         font-size: 2rem;
+         color: rgb(128, 128, 128);
+         text-decoration: none;
+         padding: .5rem 1rem;
+         border-radius: 100%;
+
+         &:hover {
+            color: white;
+            background-color: gray;
+         }
+      }
+   }
 
    .product__wrapper {
       background-color: rgb(255, 255, 255);
       border-radius: 15px;
-      max-width: 80%;
+      max-width: 85%;
       height: fit-content;
       max-height: 90%;
       padding: 1rem 2rem;
       gap: 1.5rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       overflow: auto;
 
@@ -27,31 +45,58 @@
       }
 
       .product__header {
-         width: 100%;
+         width: calc(60% - .75rem);
          display: flex;
-         justify-content: space-between;
+         flex-wrap: wrap;
          gap: 1rem;
 
          &__title {
             font-size: 2.5rem;
+            width: 100%;
          }
 
-         .close__button {
-            position: relative;
-            top: .5rem;
-            left: 1rem;
-
-            .x {
-               font-size: 2rem;
-               color: rgb(128, 128, 128);
-               text-decoration: none;
-               border: 1px solid gray;
-               padding: .5rem 1rem;
-               border-radius: 100%;
-
+         &__price {
+            font-size: 2rem;
+            text-align: end;
+         }
+         &__desc {
+            font-size: 1rem;
+         }
+         &__rating {
+            width: 100%;
+            font-size: 1.4rem;
+         }
+         &__button-wrapper {
+            
+            .button__add {
+               padding:1rem 0;
+               width: 12rem;
+               font-size: 1.2rem;
+               font-weight: bold;
+               background-color: white;
+               border: 1px solid black;
+               margin-right: 1.5rem;
                &:hover {
+                  background-color: black;
                   color: white;
+                  cursor: pointer;
+               }
+               &:active {
                   background-color: gray;
+               }
+            }
+            .button__buy {
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               border: 1px solid #AD3F4A;
+               font-size: 1.2rem;
+               color: white;
+               padding:1rem 0;
+               width: 12rem;
+               background-color: #AD3F4A;
+               &:active {
+                  background-color: white;
                }
             }
          }
@@ -61,23 +106,6 @@
          max-width: calc(40% - .75rem);
          height: auto;
          align-self: center;
-      }
-
-      .product__body {
-         width: calc(60% - .75rem);
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         overflow-y: auto;
-
-         &__price {
-            font-size: 3rem;
-            text-align: end;
-         }
-
-         &__desc {
-            font-size: 1.7rem;
-         }
       }
    }
 }

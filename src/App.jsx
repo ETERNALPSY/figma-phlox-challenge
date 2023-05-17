@@ -3,6 +3,7 @@ import CategoryCards from './components/categoryCards/categoryCards'
 import BestProducts from './components/bestProducts/bestProducts'
 import './App.css'
 import DetailProduct from './pages/detailProduct/detailProduct'
+import Tags from './components/tags/tags'
 
 
 function App() {
@@ -11,7 +12,13 @@ function App() {
       <>
          <CategoryCards />
          <Routes>
-            <Route path='/' element={<BestProducts />} > 
+            <Route path='/' element={
+               <>
+                  <Tags />
+                  <BestProducts />
+               </>
+            }>
+
                <Route path='/product/:id' element={<DetailProduct />} />
             </Route>
 

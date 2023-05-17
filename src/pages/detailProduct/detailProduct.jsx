@@ -24,22 +24,24 @@ const DetailProduct = () => {
 
    return (
       <article id='product__main'>
+         <span className='close__button'><Link className='x' to="/">X</Link></span>
          {
             isLoading
                ? <Loader />
                : (
 
                   <div className='product__wrapper'>
+                     <img className='product__wrapper__img' src={product.image} alt={product.title} />
                      <div className='product__header'>
                         <h2 className='product__header__title'>{product.title}</h2>
-                        <span className='close__button'><Link className='x' to="/">X</Link></span> 
-                     </div>
-                     <img className='product__wrapper__img' src={product.image} alt={product.title} />
-                     <div className='product__body'>
-                        <p className='product__body__price'>${product.price}</p>
-                        <p className='product__body__desc'>{product.description}</p>
-                     </div>
-
+                        <p className='product__header__price'>$ {product.price}</p> 
+                        <p className='product__header__desc'>{product.description}</p>
+                        <p className='product__header__rating'>⭐⭐⭐⭐  120 Opiniones</p>
+                        <div className='product__header__button-wrapper'>
+                           <button className='button__add'>Agregar al carrito</button>
+                           <Link className='button__buy'>Comprar</Link>
+                        </div>
+                     </div>                     
                   </div>
 
                )
