@@ -1,6 +1,6 @@
 .categories__main {
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
    width: 100%;
@@ -17,7 +17,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      width: calc(50% - 1rem);
+      width: calc(50% - .5rem);
       height: 50%;
       padding: 2rem;
       background-color: rgb(188, 19, 171);

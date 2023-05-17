@@ -14,13 +14,12 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 2rem;
 
       .card__body {
-         width: calc(25% - 2rem);
+         width: calc(25% - 1.5rem);
          text-decoration: none;
          color: black;
-         margin: 2rem 0;
+         margin: 2.5rem 0;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
