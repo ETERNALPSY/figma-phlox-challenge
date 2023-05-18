@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getProductById } from '../../services/getProducts'
-import Loader
-   from '../../components/loader/loader'
+import { CartContext } from '../../context/cartContext'
+import Loader from '../../components/loader/loader'
 import './detailProduct.scss'
 
 
 const DetailProduct = () => {
+   const { addToCart } = useContext(CartContext)
    const params = useParams()
    const [product, setProduct] = useState({})
    const [isLoading, setIsLoading] = useState(false)
@@ -38,7 +39,7 @@ const DetailProduct = () => {
                         <p className='product__header__desc'>{product.description}</p>
                         <p className='product__header__rating'>⭐⭐⭐⭐  120 Opiniones</p>
                         <div className='product__header__button-wrapper'>
-                           <button className='button__add'>Agregar al carrito</button>
+                           <button className='button__add' onClick={()=> {addToCart(product)} }>Agregar al carrito</button>
                            <Link className='button__buy'>Comprar</Link>
                         </div>
                      </div>                     
