@@ -1,6 +1,8 @@
 import './nav.scss'
 import shopping from '../../assets/shopping.png'
 import search from '../../assets/browse.png'
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
       <>
@@ -48,9 +50,11 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
+              <Link to="/login">
               <button className="btn me-2 " type="submit">
                 login
               </button>
+              </Link>
               <div className="search-box">
                 <input type="text" placeholder="Search" />
                 <div className="container-img--search">
