@@ -6,8 +6,7 @@ import DetailProduct from './pages/detailProduct/detailProduct'
 import Tags from './components/tags/tags'
 import Navbar from './components/nav/nav'
 import Main from './components/main/main'
-
-
+import Login from './pages/Login/Login'
 
 function App() {
 
@@ -26,12 +25,12 @@ function App() {
 
                <Route path='/product/:id' element={<DetailProduct />} />
             </Route>
-
+            <Route path='/login' element={<Login />}/>
             <Route path='*' element={<Link className='' to="/">Volver</Link>} />
 
-         </Routes>
-
+         </Routes> 
       </>
    )
 }
+
 export default App
