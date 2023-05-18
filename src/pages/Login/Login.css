@@ -1,0 +1,16 @@
+#row-container{
+    height: 40vh;
+}
+
+#btn-session {
+    color: white;
+}
+
+::placeholder {
+    color: gray;
+    font-size: 1em;
+}
+
+form * {
+    height: 2.5rem;
+}
