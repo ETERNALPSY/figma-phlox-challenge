@@ -13,12 +13,12 @@ function App() {
 
    return (
       <>
-         <Navbar/>
-         <Main/>
-         <CategoryCards />
+         <Navbar />
          <Routes>
             <Route path='/' element={
                <>
+                  <Main />
+                  <CategoryCards />
                   <Tags />
                   <BestProducts />
                </>
@@ -27,7 +27,7 @@ function App() {
                <Route path='/product/:id' element={<DetailProduct />} />
             </Route>
 
-            <Route path='*' element={<Link className='' to="/">Volver</Link>} /> //default
+            <Route path='*' element={<Link className='' to="/">Volver</Link>} />
 
          </Routes>
 
