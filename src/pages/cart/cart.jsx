@@ -1,16 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/cartContext";
+import DataShopp from "./content-cart";
 import "./cart.scss";
 
 const Cart = () => {
-  const { cart, deleteToCart, Total } = useContext(CartContext);
-  const [items, setItem] = useState([])
-   useEffect(()=>{
-       localStorage.setItem("carrito",JSON.stringify(cart))
-   },[items])
-  //   const saveLocal = ()=>{
-  //    localStorage.setItem("carrito",JSON.stringify(cart))
-  //   }
+  const { cart, total, deleteToCart } = useContext(CartContext);
+  
   return (
     <div>
       <div className="row ">
@@ -21,30 +16,28 @@ const Cart = () => {
             data-bs-smooth-scroll="true"
             tabindex="0"
           >
-            {cart.map((item) => {
+            {cart.map((item,index) => {
               return (
-                <div className="item">
-                  <img className="img-card" src={item.image} alt="" />
-                  <div className="ms-5">
-                    <p>{item.title}</p>
-                    <button type="button" className="btn btn-primary">
-                     Eliminar
-                    </button>
-                  </div>
-                </div>
+                <DataShopp data={item} key={item.id} Delete={deleteToCart}/>
               );
             })}
           </div>
         </div>
-        <div className="col-12 col-md-3">
-          <div className="row row-cols-md-12">
-            <h2>Compras Carrito</h2>
+        <div
+          className="col-12 col-md-3 scrollspy-example vh-100 overflow-scroll container-price"
+          data-bs-spy="scroll"
+          data-bs-smooth-scroll="true"
+          tabindex="0"
+        >
+           <div className="row row-cols-md-12">
+            <h4>Total a pagar: $ {total}</h4>
+            <button type="button" className="btn btn-primary mb-2 btn-buy">Comprar</button>
           </div>
           <div className="row">
             {cart.map((item) => {
               return (
                 <>
-                  <p>$ {item.price}</p>
+                  <p className="price" key={item.id}>$ {item.price}</p>
                 </>
               );
             })}
