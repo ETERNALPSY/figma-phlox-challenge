@@ -4,7 +4,10 @@ import "./cart.scss";
 
 const Cart = () => {
   const { cart, deleteToCart, Total } = useContext(CartContext);
-
+  const [items, setItem] = useState([])
+   useEffect(()=>{
+       localStorage.setItem("carrito",JSON.stringify(cart))
+   },[items])
   //   const saveLocal = ()=>{
   //    localStorage.setItem("carrito",JSON.stringify(cart))
   //   }
