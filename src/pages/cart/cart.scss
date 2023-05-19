@@ -1,0 +1,22 @@
+.container-card{
+    flex-wrap: nowrap;
+    flex-direction: column;
+   
+    .item{
+        border-bottom: 1px solid black;
+        display: flex;
+        width: 950px;
+        margin-top: 2rem;
+        .img-card{
+            width: 10rem;
+            height: 10rem;
+            object-fit: fill;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: red;
+            border: none;
+
+        }
+    }
+}

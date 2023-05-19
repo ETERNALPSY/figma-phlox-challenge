@@ -23,43 +23,10 @@ const Navbar = () => {
             P H L O X
           </a>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  <strong>Home</strong>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
-                  Shop
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " href="#">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " href="#">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-            <button className="btn me-2 " type="submit">
-              login
-            </button> */}
-            {/* <a className="navbar-brand navbar text-danger" href="#">
-              P H L O X
-            </a> */}
             <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a className="nav-link active" aria-current="page" href="/">
                     <strong>Home</strong>
                   </a>
                 </li>
@@ -96,9 +63,11 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <Link to="/shopping">
             <button className="btn " type="submit">
               <img className="shopping" src={shopping} alt="shopping" />
             </button>
+            </Link>
           </div>
         </div>
       </nav>
