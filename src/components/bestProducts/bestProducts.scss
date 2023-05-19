@@ -1,4 +1,7 @@
 #best__seller {
+   background-color: #f0f0f0;
+   border-radius: 15px;
+   padding: 1rem;
    .best__seller__title {
       font-weight: bolder;
       font-size: 3rem;
@@ -10,13 +13,12 @@
    }
 
    .products__wrapper {
-      width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
 
       .card__body {
-         width: calc(25% - 1.5rem);
+         width: calc(25% - .75rem);
          text-decoration: none;
          color: black;
          margin: 2.5rem 0;
@@ -28,7 +30,7 @@
             padding: 1.5rem;
             height: 80%;
             width: 100%;
-            background-color: #f0f0f0;
+            background-color: white;
             border-radius: 15px;
             display: flex;
             justify-content: center;
