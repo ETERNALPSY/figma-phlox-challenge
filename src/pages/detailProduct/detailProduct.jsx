@@ -39,8 +39,10 @@ const DetailProduct = () => {
                         <p className='product__header__desc'>{product.description}</p>
                         <p className='product__header__rating'>⭐⭐⭐⭐  120 Opiniones</p>
                         <div className='product__header__button-wrapper'>
-                           <button className='button__add' onClick={()=> {addToCart(product)}}>Agregar al carrito</button>
-                           <Link to='/' className='button__buy' onClick={()=> {addToCart(product)}}>Comprar</Link>
+                           <Link to={'/shopping'}>
+                           <button className='button__add' onClick={()=> {addToCart(product)} }>Agregar al carrito</button>
+                           </Link>
+                           <Link className='button__buy'>Comprar</Link>
                         </div>
                      </div>                     
                   </div>

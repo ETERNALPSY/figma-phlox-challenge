@@ -1,6 +1,8 @@
-import "./nav.scss";
-import shopping from "../../assets/shopping.png";
-import search from "../../assets/browse.png";
+import './nav.scss'
+import shopping from '../../assets/shopping.png'
+import search from '../../assets/browse.png'
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     <header>
@@ -21,45 +23,51 @@ const Navbar = () => {
             P H L O X
           </a>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  <strong>Home</strong>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
-                  Shop
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " href="#">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link " href="#">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-            <button className="btn me-2 " type="submit">
-              login
-            </button>
-            <div className="search-box">
-              <input type="text" placeholder="Search" />
-              <div className="container-img--search">
-                <img className="img-search" src={search} alt="search" />
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">
+                    <strong>Home</strong>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link " aria-current="page" href="#">
+                    Shop
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    About Us
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link " href="#">
+                    Blog
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link " href="#">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+              <Link to="/login">
+              <button className="btn me-2 " type="submit">
+                login
+              </button>
+              </Link>
+              <div className="search-box">
+                <input type="text" placeholder="Search" />
+                <div className="container-img--search">
+                  <img className="img-search" src={search} alt="search" />
+                </div>
               </div>
             </div>
+            <Link to="/shopping">
             <button className="btn " type="submit">
               <img className="shopping" src={shopping} alt="shopping" />
             </button>
+            </Link>
           </div>
         </div>
       </nav>
